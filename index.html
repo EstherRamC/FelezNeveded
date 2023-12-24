@@ -9,6 +9,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preload" href="css/styles.css" as="style">
     <link href="css/styles.css" rel="stylesheet">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var boton = document.getElementById("botonAyuda");
+        var popup = document.getElementById("popupAyuda");
+        var cerrar = document.getElementById("cerrarPopup");
+        var video = document.getElementById("miVideo"); // Obtener el elemento del video
+
+        boton.onclick = function() {
+            popup.style.display = "block";
+        };
+
+        cerrar.onclick = function() {
+            popup.style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        };
+    });
+            
+    </script>
 </head>
 <body>
 
@@ -24,7 +48,17 @@
         <div class="contenido-hero">
             <h2>FELEZ <span> NEVEDED</span></h2> 
 
-            <a class="boton" href="#">Ayuda que es esto</a>
+            <a class="boton" href="#" id="botonAyuda">Ayuda que es esto</a>
+            <div id="popupAyuda" class="popup-contenedor" style="display:none;">
+                <div class="popup">
+                    <video width="320" height="240" controls >
+                        <source src="img/Tevy.MP4" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>
+                    <button id="cerrarPopup">Cerrar</button>
+                </div>
+            </div>
+
         </div> <!-- .contenido-hero --> 
     </section>
     
