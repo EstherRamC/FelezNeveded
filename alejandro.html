@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style2.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() { // Corregido aquí
+            // Obtén la imagen por su ID
+            var imagen = document.getElementById('imagenCambio');
+            
+            // Evento para cuando el cursor pasa por encima de la imagen
+            imagen.addEventListener('mouseover', function() {
+                this.src = 'img/AleCur.JPG'; // Cambia a la nueva imagen
+            });
+            
+            // Evento para cuando el cursor sale de la imagen
+            imagen.addEventListener('mouseout', function() {
+                this.src = 'img/Ale.JPG'; // Vuelve a la imagen original
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/TeteVy.JPG" alt="Logotipo">
+            <span>Regresar</span>
+        </a>
+    </header>
+
+
+    <main class="contenedor">
+        <h1>Señor Don Alejandro</h1>
+
+        <div class="camisa">
+            <img id= "imagenCambio" class="camisa__imagen" src="img/Ale.JPG" alt="Imagen del Producto">
+
+            <div class="camisa__contenido">
+                <p>Maecenas consectetur ultricies mi vel venenatis. Curabitur risus tellus, congue non tellus at, semper dapibus turpis. Duis pellentesque, risus sit amet placerat porttitor, tortor augue volutpat ante, non dignissim odio ligula at arcu.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Hecho por mi y yo</p>
+    </footer>
+    
+</body>
+</html>
